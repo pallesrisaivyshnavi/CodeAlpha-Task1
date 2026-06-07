@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('city')">City</button>
+        <button onclick="filterImages('animals')">Animals</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+        <!-- Nature Images -->
+        <img src="https://picsum.photos/id/1015/500/350"
+             class="gallery-item nature"
+             onclick="openLightbox(this)"
+             alt="Nature">
+
+        <img src="https://picsum.photos/id/1018/500/350"
+             class="gallery-item nature"
+             onclick="openLightbox(this)"
+             alt="Nature">
+
+        <img src="https://picsum.photos/id/1035/500/350"
+             class="gallery-item nature"
+             onclick="openLightbox(this)"
+             alt="Nature">
+
+        <img src="https://picsum.photos/id/1043/500/350"
+             class="gallery-item nature"
+             onclick="openLightbox(this)"
+             alt="Nature">
+
+
+        <!-- City Images -->
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=500&h=350&fit=crop"
+             class="gallery-item city"
+             onclick="openLightbox(this)"
+             alt="City">
+
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&h=350&fit=crop"
+             class="gallery-item city"
+             onclick="openLightbox(this)"
+             alt="City">
+
+        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500&h=350&fit=crop"
+             class="gallery-item city"
+             onclick="openLightbox(this)"
+             alt="City">
+
+        <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=500&h=350&fit=crop"
+             class="gallery-item city"
+             onclick="openLightbox(this)"
+             alt="City">
+
+
+        <!-- Animal Images -->
+        <img src="https://picsum.photos/id/1024/500/350"
+             class="gallery-item animals"
+             onclick="openLightbox(this)"
+             alt="Animal">
+
+        <img src="https://picsum.photos/id/237/500/350"
+             class="gallery-item animals"
+             onclick="openLightbox(this)"
+             alt="Animal">
+
+        <img src="https://picsum.photos/id/433/500/350"
+             class="gallery-item animals"
+             onclick="openLightbox(this)"
+             alt="Animal">
+
+        <img src="https://picsum.photos/id/593/500/350"
+             class="gallery-item animals"
+             onclick="openLightbox(this)"
+             alt="Animal">
+
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+
+        <img id="lightbox-img" src="" alt="">
+
+        <button class="next" onclick="changeImage(1)">❯</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
